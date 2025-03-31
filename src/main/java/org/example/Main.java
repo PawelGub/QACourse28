@@ -8,7 +8,7 @@ public class Main {
         compareNumbers();
         System.out.println(task5(22, 7));
         Task6(8);
-        System.out.println(task7(-1));
+        System.out.println(task7(1));
         Task8("Spam,Eggs", 3);
         System.out.println(Task9(2025));
         Task10();
@@ -29,58 +29,32 @@ public class Main {
 
         int sum = a + b;
 
-        if (sum >= 0) {
-            System.out.println("Сумма положительная");
-        } else {
-            System.out.println("Сумма отрицательная");
-        }
+        System.out.println(sum >= 0 ? "Сумма положительная" : "Сумма отрицательная");
     }
 
-    public static void printColor() {                      //Задание 3
-        int value = -1;
-        if (value <= 0) {
-            System.out.println("Красный");
-        } else if (value > 0 && value <= 100) {
-            System.out.println("Желтый");
-
-        } else if (value > 100) {
-            System.out.println("Зеленый");
-        }
+    public static void printColor() {                       //Задание 3
+        int value = 322;
+        System.out.println(
+                value <= 0 ? "Красный" : value <= 100 ? "Жёлтый" : "Зелёный");
     }
 
     public static void compareNumbers() {                   //Задание 4
         int a = 3;
         int b = 4;
-        if (a >= b) {
-            System.out.println("a >= b");
-        } else {
-            System.out.println("a < b");
-        }
+        System.out.println(a >= b ? "a >= b" : "a < b");
     }
 
     static boolean task5(int a, int b) {                   //Задание 5
         int sum = a + b;
-        if (sum > 10 && sum < 20) {
-            return true;
-        } else {
-            return false;
-        }
+        return sum >= 10 && sum <= 20;
     }
 
     public static void Task6(int number) {                  //Задание 6
-        if (number >= 0) {
-            System.out.println("Число положительное");
-        } else {
-            System.out.println("Число отрицательное");
-        }
+        System.out.println(number >= 0 ? "Число положительное" : "Число отрицательное");
     }
 
     public static boolean task7(int number) {               //Задание 7
-        if (number < 0) {
-            return true;
-        } else {
-            return false;
-        }
+     return number < 0;
     }
 
     public static void Task8(String str, int count) {       //Задание 8
@@ -90,23 +64,13 @@ public class Main {
     }
 
     public static boolean Task9(int year) {                 //Задание 9
-        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+    return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
     }
 
-    public static void Task10() {                           //Задание 10
+    public static void Task10() {                        // задание 10
         int[] arr = {1, 1, 0, 0, 1, 0, 1, 1, 0, 0};
-
         for (int i = 0; i < arr.length; i++) {
-            //
-            if (arr[i] == 0) {
-                arr[i] = 1;
-            } else {
-                arr[i] = 0;
-            }
+            arr[i] = arr[i] == 0 ? 1 : 0;
         }
         System.out.println("Массив:");
         for (int i : arr) {
@@ -160,7 +124,7 @@ public class Main {
         }
     }
 
-    public static int[] Task14(int len, int initialValue) {  //Задание 14
+    public static int[] Task14(int len, int initialValue) {   //Задание 14
         int[] array = new int[len];
         for (int i = 0; i < len; i++) {
             array[i] = initialValue;
