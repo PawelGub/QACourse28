@@ -34,5 +34,8 @@ public class Main {
         System.out.println("Котов создано: " + Cat.getCount());
         System.out.println("Собак создано: " + Dog.getCount());
         System.out.println("Всего животных: " + Животное.getCount());
+
+        System.out.println("-----------ЗАДАНИЕ 2--------------");
+        Shapes.run();
     }
 }
